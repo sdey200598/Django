@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+{% block title %}
+Swarup_Photos_Contact_Us
+{% endblock title %}
+
+{% block body %}
+<div class="container-fluid mb-3 px-0">
+    <img src="/static/contact.png" height=450px; class="d-block w-100 mx-0">
+</div>
+<div class="container mb-3 py-5">
+    <center>
+    <form method="post" action="/contacts">
+        {% csrf_token %}
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input type="text" class="form-control" id="name" name="name" placeholder="&nbsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Enter Your Name">
+        </div>
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input type="email" class="form-control" id="email" name="email" placeholder="&ensp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Enter Your Email Address">
+        </div>
+        <div class="form-group">
+            <label for="phone">Phone No</label>
+            <input type="phone" class="form-control" id="phone" name="phone" placeholder="&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Enter Your Phone No">
+          </div>
+        <div class="form-group">
+          <label for="desc">&ensp;&emsp;&emsp;&emsp;&emsp;Tell me about what you want to contact us for....</label>
+          <textarea class="form-control" id="desc" rows="3" name="desc"></textarea>
+        </div>
+        <br>
+        <button  class="btn btn-primary" type="submit">Submit</button>
+    </form>
+</center>  
+{% endblock body %}
